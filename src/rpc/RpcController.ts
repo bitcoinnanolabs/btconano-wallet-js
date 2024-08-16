@@ -1,4 +1,4 @@
-import { BlockRepresentation } from 'nanocurrency';
+import { BlockRepresentation } from 'btcocurrency';
 import { fetchWithTimeout } from '@/utils';
 import {
 	AccountBalanceResponse,

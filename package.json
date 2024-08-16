@@ -34,7 +34,7 @@
 	},
 	"dependencies": {
 		"bignumber.js": "^9.1.1",
-		"nanocurrency": "^2.5.0"
+		"btcocurrency": "^1.0.5"
 	},
 	"devDependencies": {
 		"@jest/types": "^29.6.1",

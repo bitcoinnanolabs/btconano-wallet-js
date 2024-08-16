@@ -7,7 +7,7 @@ import {
 	convert,
 	deriveSecretKey,
 	generateSeed,
-} from 'nanocurrency';
+} from 'btcocurrency';
 import NanoWallet from './WalletController';
 import qrcode from 'qrcode-terminal';
 import fs from 'fs';

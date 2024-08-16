@@ -5,7 +5,7 @@ import {
 	deriveAddress,
 	derivePublicKey,
 	validateWork,
-} from 'nanocurrency';
+} from 'btcocurrency';
 import NanoRPC, { NanoRpcConfig } from '../rpc/RpcController';
 import {
 	DEFAULT_TIMEOUT,
