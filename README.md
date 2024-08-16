@@ -22,7 +22,7 @@ npm install nano-wallet-js
 #### Init the Wallet instance and sync:
 
 ```js
-import NanoWallet from 'nano-wallet-js';
+import NanoWallet from 'btconano-wallet-js';
 
 const config = {
 	privateKey: '000AAFF...', // The privateKey (secret) of your wallet (not the SEED, neither the MNEMONIC)
