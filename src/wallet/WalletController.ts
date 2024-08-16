@@ -60,7 +60,7 @@ export default class NanoWallet extends BaseController<
 		representative: '',
 		precomputeWork: true,
 		minAmountRaw: convert(MIN_AMOUNT.toString(), {
-			from: Unit.NANO,
+			from: Unit.BTCO,
 			to: Unit.raw,
 		}),
 		timeout: DEFAULT_TIMEOUT,
@@ -83,7 +83,7 @@ export default class NanoWallet extends BaseController<
 	constructor(config: NanoWalletConfig, state?: NanoWalletState | null) {
 		super(config, state || undefined);
 		this.publicKey = derivePublicKey(config.privateKey);
-		this.account = deriveAddress(this.publicKey, { useNanoPrefix: true });
+		this.account = deriveAddress(this.publicKey, { useBtcoPrefix: true });
 		this.logger = new Logger('NANO_WALLET', config.debug);
 		this.logger.info(`Imported account: ${this.account}`);
 		this.initialize();
@@ -119,10 +119,10 @@ export default class NanoWallet extends BaseController<
 			this.logger.info(
 				`Wallet Sync! Balance: ${convert(balance, {
 					from: Unit.raw,
-					to: Unit.NANO,
+					to: Unit.BTCO,
 				})} NANO. Receivable: ${convert(receivable, {
 					from: Unit.raw,
-					to: Unit.NANO,
+					to: Unit.BTCO,
 				})}`,
 			);
 			this.update({ balance, frontier, receivable, representative });
@@ -213,7 +213,7 @@ export default class NanoWallet extends BaseController<
 			this.logger.info(
 				`${convert(receivable, {
 					from: Unit.raw,
-					to: Unit.NANO,
+					to: Unit.BTCO,
 				})} NANO to receive from ${receivableBlocks.length} blocks`,
 			);
 			this.update({ receivableBlocks, receivable });
@@ -247,7 +247,7 @@ export default class NanoWallet extends BaseController<
 			this.logger.info(
 				`Receiving ${convert(amount, {
 					from: Unit.raw,
-					to: Unit.NANO,
+					to: Unit.BTCO,
 				})} NANO from block ${link}`,
 			);
 
@@ -312,7 +312,7 @@ export default class NanoWallet extends BaseController<
 			this.logger.info(
 				`Sending ${convert(amount, {
 					from: Unit.raw,
-					to: Unit.NANO,
+					to: Unit.BTCO,
 				})} NANO to ${to}`,
 			);
 

@@ -83,7 +83,7 @@ describe('Init Wallet', () => {
 
 	it('should ensure balance in master test wallet', async () => {
 		const minAmount = convert(MIN_AMOUNT.toString(), {
-			from: Unit.NANO,
+			from: Unit.BTCO,
 			to: Unit.raw,
 		});
 		if (TunedBigNumber(masterWallet.balance).isLessThan(minAmount)) {
@@ -92,7 +92,7 @@ describe('Init Wallet', () => {
 				.toString();
 			const minDepositAmountInNano = convert(minDepositAmount, {
 				from: Unit.raw,
-				to: Unit.NANO,
+				to: Unit.BTCO,
 			});
 			console.log(
 				`Master wallet has no balance, deposit at least ${minDepositAmountInNano} Nano`,
@@ -133,7 +133,7 @@ describe('Init Wallet', () => {
 
 	it('should send amount', async () => {
 		const amount = convert(DEFAULT_AMOUNT.toString(), {
-			from: Unit.NANO,
+			from: Unit.BTCO,
 			to: Unit.raw,
 		});
 
