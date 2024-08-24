@@ -29,7 +29,7 @@ const config = {
 	rpcUrls: ['http://[::1]:7076'], // A string or an array of RPC addresses
 	workerUrls: ['http://[::1]:7076'], // A string or an array of RPC Worker Server. Can be the same as rpcUrls
 	representative:
-		'nano_3kc8wwut3u8g1kwa6x4drkzu346bdbyqzsn14tmabrpeobn8igksfqkzajbb', // representative account
+		'btco_3kc8wwut3u8g1kwa6x4drkzu346bdbyqzsn14tmabrpeobn8igksfqkzajbb', // representative account
 	debug: true, // show console log message (optional)
 };
 
@@ -92,7 +92,7 @@ for (const receivable of wallet.receivableBlocks) {
 **Send**: Send amount in raws to another wallet.
 
 ```js
-const to = 'nano_1abcd...';
+const to = 'btco_1abcd...';
 const amount = '1000000000000000000000000000'; // 0.001 Nano
 const { hash } = await wallet.send(to, amount);
 
@@ -103,29 +103,17 @@ console.log('Balance:', wallet.balance);
 **Sweep**: Send all balance to another wallet (Careful!)
 
 ```js
-const to = 'nano_3efgh...';
+const to = 'btco_3efgh...';
 const { hash } = await wallet.sweep(to);
 ```
 
 **Set Representative**: Set a new representative
 
 ```js
-const rep = 'nano_4ijk1mno...';
+const rep = 'btco_4ijk1mno...';
 await wallet.setRepresentative(rep);
 
 // print
 console.log(wallet.representative, wallet.currentRepresentative);
 ```
 
-More methods soon...
-
-## 🚧 Work in progress!
-
-This is a initial release, not recommended for production use yet.
-
-## Donate Ӿ
-
-If you find this library useful and want to support its development please consider donating:
-**nano_3dqh8z8ncswmf7151gryu7mqpwbw4f68hi7d8g433omtuabfi438etyyp9ik**
-
-<kbd><img src="https://i.ibb.co/Gs6yhv2/nano-wallet-js-qr-code.png" width="200px" height="200px" /></kbd>
