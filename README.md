@@ -13,7 +13,7 @@ SDK for developers to create and interact with Nanocurrency wallets easily with 
 
 ## How to use it
 
-#### Install nano-wallet-js package
+#### Install btconano-wallet-js package
 
 ```
 npm install nano-wallet-js
