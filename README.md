@@ -16,7 +16,7 @@ SDK for developers to create and interact with Nanocurrency wallets easily with 
 #### Install btconano-wallet-js package
 
 ```
-npm install nano-wallet-js
+npm install btconano-wallet-js
 ```
 
 #### Init the Wallet instance and sync:
