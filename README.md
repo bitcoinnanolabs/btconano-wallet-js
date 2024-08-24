@@ -1,4 +1,4 @@
-# nano-wallet-js
+# btconano-wallet-js
 
 SDK for developers to create and interact with Nanocurrency wallets easily with Typescript or Javascript
 
@@ -22,7 +22,7 @@ npm install btconano-wallet-js
 #### Init the Wallet instance and sync:
 
 ```js
-import NanoWallet from 'btconano-wallet-js';
+import BTCONanoWallet from 'btconano-wallet-js';
 
 const config = {
 	privateKey: '000AAFF...', // The privateKey (secret) of your wallet (not the SEED, neither the MNEMONIC)
@@ -33,7 +33,7 @@ const config = {
 	debug: true, // show console log message (optional)
 };
 
-const wallet = new NanoWallet(config);
+const wallet = new BTCONanoWallet(config);
 
 await wallet.sync();
 ```
@@ -45,7 +45,7 @@ await wallet.sync();
 // You can use a Database, Filesystem, KV, Redux or whatever...
 const state = await getFromMyStorage();
 
-const wallet = new NanoWallet(config, state);
+const wallet = new BTCONanoWallet(config, state);
 
 // Subscribe to state changes to persist in your storage
 wallet.subscribe(async state => {
