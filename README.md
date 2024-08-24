@@ -1,6 +1,6 @@
 # btconano-wallet-js
 
-SDK for developers to create and interact with Nanocurrency wallets easily with Typescript or Javascript
+SDK for developers to create and interact with Bicoin nano wallets easily with Typescript or Javascript
 
 ## Why to use it ?
 
